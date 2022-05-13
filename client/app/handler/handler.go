@@ -40,10 +40,10 @@ func NewHandler(
 }
 
 func (h *Handler) HandleServer() {
-	sleepTime := 5 * time.Second
+	sleepTime := 1 * time.Second
 	for {
 		if h.Connected {
-			time.Sleep(10 * time.Second)
+			time.Sleep(2 * time.Second)
 			continue
 		}
 		if err := h.ServerIsAvailable(); err != nil {
